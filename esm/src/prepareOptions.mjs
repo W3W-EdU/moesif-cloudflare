@@ -9,7 +9,7 @@ const identifyUser = (req, res, env, ctx) => {
   if (token) {
     const jwtToken = token.split(' ')[1]; // Assuming the token is in the format "Bearer <token>"
     const decodedToken = atob(jwtToken.split('.')[1]);
-    const tokenPayload = JSON.parse(decodedToken);
+    const tokenPayload = JSON.parse(decodedToken);kingofthearmy
     return tokenPayload.sub; // Assuming the subject of the token is the user id
   }
   return undefined;
